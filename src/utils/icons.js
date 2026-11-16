@@ -1,0 +1,46 @@
+import {
+  Compass,
+  Building2,
+  ClipboardList,
+  Shovel,
+  Route,
+  Handshake,
+  Hammer,
+  BadgeCheck,
+  Search,
+  Eye,
+  FileCheck,
+  ShieldCheck,
+  Gauge,
+  HardHat,
+  Leaf,
+  Users,
+  Truck,
+  Landmark,
+  Layers,
+} from "lucide-react";
+
+// Data files refer to icons by name. Add new icons here.
+export const icons = {
+  Compass,
+  Building2,
+  ClipboardList,
+  Shovel,
+  Route,
+  Handshake,
+  Hammer,
+  BadgeCheck,
+  Search,
+  Eye,
+  FileCheck,
+  ShieldCheck,
+  Gauge,
+  HardHat,
+  Leaf,
+  Users,
+  Truck,
+  Landmark,
+  Layers,
+};
+
+export const getIcon = (name) => icons[name] || Layers;

@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* Brand tokens, sampled from the Buyut logo and company profile. */
+@theme {
+  --color-gold: #f3a51b;
+  --color-orange: #ed8126;
+  --color-ember: #d9563d;
+  --color-rust: #9f2d12;
+  --color-terracotta: #a34825;
+  --color-brick: #8a3c1d;
+  --color-brown: #67351f;
+  --color-charcoal: #211b18;
+  --color-ink: #14100e;
+  --color-cream: #f8f6f2;
+  --color-sand: #efe9df;
+
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --animate-marquee: marquee 45s linear infinite;
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  --animate-pulse-dot: pulse-dot 1.8s ease-out infinite;
+  @keyframes pulse-dot {
+    0% {
+      box-shadow: 0 0 0 0 rgba(243, 165, 27, 0.6);
+    }
+    100% {
+      box-shadow: 0 0 0 10px rgba(243, 165, 27, 0);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    .animate-marquee,
+    .animate-pulse-dot {
+      animation: none;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+  .section-pad {
+    @apply py-20 sm:py-24 lg:py-32;
+  }
+  .eyebrow {
+    @apply flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-terracotta;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply h-px w-8 bg-current;
+  }
+  /* Faint engineering-drawing grid for dark sections. */
+  .bg-blueprint {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-gold via-orange to-ember bg-clip-text text-transparent;
+  }
+}
