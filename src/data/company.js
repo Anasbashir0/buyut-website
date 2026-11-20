@@ -33,7 +33,7 @@ export const company = {
       "No. 10 Suite 5, Sapele Street off Ladoke Akintola Boulevard, Garki 2, Abuja, Nigeria",
     // Exact pin from Google Maps > Share > Embed a map (only the src URL, not the whole iframe tag).
     mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.4856718450583!2d7.490147173673235!3d9.019382289142214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0c77bfe27f4b%3A0x44669b04376f750a!2sTrans-secure%20Limited!5e0!3m2!1sen!2sng!4v1795090762911!5m2!1sen!2sng",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3073.3741174350776!2d7.490448975018676!3d9.01932039104152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0d6c4dc206ad%3A0xc7427349479711df!2sBuyut%20Integrated%20Services!5e1!3m2!1sen!2sng!4v1795179722344!5m2!1sen!2sng",
   },
 
   // Add real account URLs only. Empty entries are not shown.
